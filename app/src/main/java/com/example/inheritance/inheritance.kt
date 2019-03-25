@@ -1,6 +1,6 @@
 open class Animal(val id: Int, var name: String, var alive: Boolean = true) {
     override fun toString(): String {
-        return id.toString() +" Name: "+ name+ " description: "+description+"\n"
+        return "ID: "+id.toString() +" Name: "+ name+ " description: "+description+" Living Status: "+alive+"\n"
     }
     open val description: String
         get() = "This animal is called a $name"
@@ -21,7 +21,8 @@ class Cat(id: Int, name: String, alive: Boolean = true, growlingPitch: String,  
 
 
     override fun toString(): String {
-        return "ID: "+id+" "+ description+"\n"
+        kill()
+        return "ID: "+id+" "+ description+" Living Status: "+alive+"\n"
     }
 
     override val description: String
@@ -47,7 +48,8 @@ val animals = mutableListOf(
     Tiger(3, "Kvast V", growlingPitch = "D3"),
     Animal(4, "Killer"),
     Cat(5, "Pusser", livesLeft = 5,growlingPitch = "c4"),
-    Cat(6, "Pelle Haleløs",growlingPitch = "c2")
+    Cat(6, "Pelle Haleløs",growlingPitch = "c2") ,
+    Cat(7, "Ddd", livesLeft = 0,growlingPitch = "c2")
 )
 
 fun main(args: Array<String>) {
