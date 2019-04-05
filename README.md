@@ -44,3 +44,7 @@ open class Omnivore(age:Int,name: String) : Herbivore(age), Carnivore {
 Overriding with inheritance and interfaces
 -
 it's fine to inherit from both inheritance and a interface but the problem comes when both of them have a method with the same name this can be fixed with the useing super qualified by the supertype name in angle brackets "super<>" as seen above.
+
+Abstract Class
+-
+Abstract classes may contain both abstract and non-abstract properties and methods. An abstract class is useless on its own because you cannot create objects from it. Any subclass that extends the abstract class must implement all of its abstract methods and properties, or the subclass should also be declared as abstract Abstract classes are also open by default.
